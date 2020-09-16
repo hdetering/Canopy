@@ -47,7 +47,7 @@ canopy.sample.parallel = function(R, X, WM, Wm, epsilonM, epsilonm, C = NULL,
     cat("Sample in tree space with", k, "subclones\n")
     
     #begin parallel
-    nCores <- detectCores() - 1
+    nCores <- future::availableCores() - 1
     cl <- makeCluster(nCores)
     clusterExport(cl, list("k", "R", "X", "WM", "Wm", "epsilonM", "epsilonm", "C",
                            "Y",  "max.simrun", "min.simrun", "writeskip", "projectname",
