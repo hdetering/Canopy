@@ -13,3 +13,4 @@ importFrom("graphics", "abline", "axis", "image", "layout", "par", "plot",
            "points", "text", "title")
 importFrom("stats", "dnorm", "rmultinom", "runif", "sd")
 importFrom("utils", "write.table")
+importFrom("future", "availableCores")
